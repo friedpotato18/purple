@@ -24,20 +24,23 @@
         }
         img {
             border: 5px solid #8a2be2; /* Initial violet purple border */
-            animation: flashPurpleShades 1s infinite; /* Faster animation for flashing purple shades */
+            animation: flashBorderColors 1s infinite; /* Animation for flashing border colors */
         }
-        @keyframes flashPurpleShades {
+        @keyframes flashBorderColors {
             0% {
                 border-color: #8a2be2; /* Blue violet */
             }
-            25% {
-                border-color: #9370db; /* Medium purple */
+            20% {
+                border-color: #ff69b4; /* Hot pink */
             }
-            50% {
-                border-color: #dda0dd; /* Plum */
+            40% {
+                border-color: #7fffd4; /* Aquamarine */
             }
-            75% {
-                border-color: #ee82ee; /* Violet */
+            60% {
+                border-color: #ffd700; /* Gold */
+            }
+            80% {
+                border-color: #ff4500; /* Orange red */
             }
             100% {
                 border-color: #8a2be2; /* Blue violet */
