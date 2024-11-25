@@ -19,6 +19,7 @@
         }
         a {
             color: #8a2be2; /* Blue violet link color */
+            animation: flashTextColors 0.5s infinite 5s; /* Animation for flashing link colors with 5s delay */
         }
         .image-container {
             margin: 20px 0;
@@ -26,6 +27,9 @@
         img {
             border: 5px solid #8a2be2; /* Initial violet purple border */
             animation: flashBorderColors 0.5s infinite 5s, flashImageColors 0.5s infinite 5s; /* Faster animation for flashing border and image colors with 5s delay */
+        }
+        p {
+            animation: flashTextColors 0.5s infinite 5s; /* Animation for flashing paragraph text colors with 5s delay */
         }
         .warning {
             position: fixed;
@@ -119,6 +123,26 @@
             }
             100% {
                 filter: hue-rotate(360deg);
+            }
+        }
+        @keyframes flashTextColors {
+            0% {
+                color: #4b0082; /* Indigo */
+            }
+            20% {
+                color: #ff69b4; /* Hot pink */
+            }
+            40% {
+                color: #7fffd4; /* Aquamarine */
+            }
+            60% {
+                color: #ffd700; /* Gold */
+            }
+            80% {
+                color: #ff4500; /* Orange red */
+            }
+            100% {
+                color: #4b0082; /* Indigo */
             }
         }
     </style>
