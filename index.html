@@ -6,10 +6,11 @@
     <title>Purple Themed Webpage</title>
     <style>
         body {
-            background-color: #e6e6fa; /* Light purple background */
+            background-color: #e6e6fa; /* Initial light purple background */
             color: #4b0082; /* Indigo text color */
             font-family: Arial, sans-serif;
             text-align: center; /* Center all text */
+            animation: flashBackgroundColors 1s infinite; /* Animation for flashing background colors */
         }
         header {
             background-color: #9370db; /* Medium purple header */
@@ -40,6 +41,23 @@
             }
             100% {
                 border-color: #8a2be2; /* Blue violet */
+            }
+        }
+        @keyframes flashBackgroundColors {
+            0% {
+                background-color: #e6e6fa; /* Light purple */
+            }
+            25% {
+                background-color: #d8bfd8; /* Thistle */
+            }
+            50% {
+                background-color: #dda0dd; /* Plum */
+            }
+            75% {
+                background-color: #ee82ee; /* Violet */
+            }
+            100% {
+                background-color: #e6e6fa; /* Light purple */
             }
         }
     </style>
