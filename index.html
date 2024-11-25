@@ -22,8 +22,25 @@
             margin: 20px 0;
         }
         img {
-            border: 5px solid #8a2be2; /* Violet purple border */
-            box-shadow: 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2, 0 0 50px #8a2be2; /* Neon purple shadow effect */
+            border: 5px solid #8a2be2; /* Initial violet purple border */
+            animation: flashPurpleShades 2s infinite; /* Animation for flashing purple shades */
+        }
+        @keyframes flashPurpleShades {
+            0% {
+                border-color: #8a2be2; /* Blue violet */
+            }
+            25% {
+                border-color: #9370db; /* Medium purple */
+            }
+            50% {
+                border-color: #dda0dd; /* Plum */
+            }
+            75% {
+                border-color: #ee82ee; /* Violet */
+            }
+            100% {
+                border-color: #8a2be2; /* Blue violet */
+            }
         }
     </style>
 </head>
