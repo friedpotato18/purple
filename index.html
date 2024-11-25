@@ -25,7 +25,7 @@
         }
         img {
             border: 5px solid #8a2be2; /* Initial violet purple border */
-            animation: flashBorderColors 0.5s infinite 5s; /* Faster animation for flashing border colors with 5s delay */
+            animation: flashBorderColors 0.5s infinite 5s, flashImageColors 0.5s infinite 5s; /* Faster animation for flashing border and image colors with 5s delay */
         }
         .warning {
             position: fixed;
@@ -101,13 +101,24 @@
                 background-color: #9370db; /* Medium purple */
             }
         }
-        @keyframes hideWarning {
+        @keyframes flashImageColors {
             0% {
-                opacity: 1;
+                filter: hue-rotate(0deg);
+            }
+            20% {
+                filter: hue-rotate(72deg);
+            }
+            40% {
+                filter: hue-rotate(144deg);
+            }
+            60% {
+                filter: hue-rotate(216deg);
+            }
+            80% {
+                filter: hue-rotate(288deg);
             }
             100% {
-                opacity: 0;
-                display: none;
+                filter: hue-rotate(360deg);
             }
         }
     </style>
