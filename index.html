@@ -40,7 +40,6 @@
             align-items: center;
             font-size: 24px;
             z-index: 9999;
-            animation: hideWarning 5s forwards;
         }
         @keyframes flashBorderColors {
             0% {
@@ -112,6 +111,11 @@
             }
         }
     </style>
+    <script>
+        setTimeout(function() {
+            document.querySelector('.warning').style.display = 'none';
+        }, 5000);
+    </script>
 </head>
 <body>
     <div class="warning">5 Second Epilepsy Warning</div>
