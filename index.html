@@ -32,6 +32,20 @@
         p {
             animation: flashTextColors 0.5s infinite 5s; /* Animation for flashing paragraph text colors with 5s delay */
         }
+        .button {
+            background-color: #8a2be2; /* Blue violet button color */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border: 2px solid #8a2be2; /* Violet purple border */
+            border-radius: 5px;
+            animation: flashButtonColors 0.5s infinite 5s; /* Animation for flashing button colors with 5s delay */
+        }
         .warning {
             position: fixed;
             top: 0;
@@ -146,6 +160,26 @@
                 color: #4b0082; /* Indigo */
             }
         }
+        @keyframes flashButtonColors {
+            0% {
+                background-color: #8a2be2; /* Blue violet */
+            }
+            20% {
+                background-color: #ff69b4; /* Hot pink */
+            }
+            40% {
+                background-color: #7fffd4; /* Aquamarine */
+            }
+            60% {
+                background-color: #ffd700; /* Gold */
+            }
+            80% {
+                background-color: #ff4500; /* Orange red */
+            }
+            100% {
+                background-color: #8a2be2; /* Blue violet */
+            }
+        }
     </style>
     <script>
         setTimeout(function() {
@@ -163,5 +197,39 @@
     </div>
     <p>This is a paragraph of text on my colorful flashing webpage.</p>
     <a href="https://www.example.com">Visit Example.com</a>
+    <br>
+    <a href="second-page.html" class="button">Go to Second Page</a>
+</body>
+</html>
+Second Page (second-page.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <style>
+        body {
+            background-image: url('your-texture-image-url.jpg'); /* Add your texture image URL here */
+            background-size: cover; /* Ensure the texture covers the entire background */
+            color: #4b0082; /* Indigo text color */
+            font-family: Arial, sans-serif;
+            text-align: center; /* Center all text */
+        }
+        header {
+            background-color: #9370db; /* Medium purple header */
+            padding: 20px;
+        }
+        a {
+            color: #8a2be2; /* Blue violet link color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Second Page</h1>
+    </header>
+    <p>This is the second page of the colorful flashing website.</p>
+    <a href="index.html">Back to Main Page</a>
 </body>
 </html>
